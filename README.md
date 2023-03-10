@@ -19,7 +19,7 @@ The sacforecast.py is used to make frequency analysis in order to retrive the fr
 Note that the STA/LTA ratio calculation is done using the classic_sta_lta function from ObsPy's signal module, which computes the classic short-term average / long-term average ratio for earthquake detection. The remaining time until the next possible event is calculated by comparing the current ratio value to a threshold that is set as three times the standard deviation above the mean of the ratio values. If the current ratio value is above this threshold, the remaining time is labeled as "Possible event".
 This code computes the PSD of the first trace in the SAC file, plots the PSD using a logarithmic frequency axis, and then estimates the remaining time until the next frequency variation above a threshold of 10 dB/Hz. If no frequency variation above the threshold is detected, the code prints a message indicating that no event was detected.
 
-<img src="https://i.ibb.co/PgjGM3s/image.png"></img>
+<img src="https://i.ibb.co/PgjGM3s/image.png">image</img>
 
 RO
 
