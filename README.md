@@ -19,6 +19,10 @@ The sacforecast.py is used to make frequency analysis in order to retrive the fr
 Note that the STA/LTA ratio calculation is done using the classic_sta_lta function from ObsPy's signal module, which computes the classic short-term average / long-term average ratio for earthquake detection. The remaining time until the next possible event is calculated by comparing the current ratio value to a threshold that is set as three times the standard deviation above the mean of the ratio values. If the current ratio value is above this threshold, the remaining time is labeled as "Possible event".
 This code computes the PSD of the first trace in the SAC file, plots the PSD using a logarithmic frequency axis, and then estimates the remaining time until the next frequency variation above a threshold of 10 dB/Hz. If no frequency variation above the threshold is detected, the code prints a message indicating that no event was detected.
 
+Code usage
+
+In order to run this code you will need to import with pip : numpy obspy matplotlib. The code is written in Python 3.8.10, higher version should work also. You NEED TO RON BOTH FILES in order to make detection in real time sacsave.py that is the client who get the miniseed packs fromseedlink server and save them as .SAC and the sacforecast.py that make the analysis and estimate the remaining time.
+
 <img src="https://i.ibb.co/PgjGM3s/image.png">image</img>
 
 RO
@@ -40,3 +44,7 @@ Codul și fișierul sacsave.py salvează SAC în fișier cu instrucțiunea trace
 Sacforecast.py este folosit pentru a face analize de frecvență pentru a prelua intervalul de frecvență până la următorul eveniment seismic peste limitele scrise în cod.
 Rețineți că calculul raportului STA/LTA se face folosind funcția classic_sta_lta din modulul de semnal al ObsPy, care calculează raportul clasic mediu pe termen scurt / mediu pe termen lung pentru detectarea cutremurului. Timpul rămas până la următorul eveniment posibil este calculat prin compararea valorii raportului curent cu un prag care este setat ca de trei ori abaterea standard peste media valorilor raportului. Dacă valoarea raportului curent este peste acest prag, timpul rămas este etichetat ca „Eveniment posibil”.
 Acest cod calculează PSD-ul primei urme din fișierul SAC, trasează PSD folosind o axă de frecvență logaritmică și apoi estimează timpul rămas până la următoarea variație de frecvență peste un prag de 10 dB/Hz. Dacă nu este detectată nicio variație de frecvență peste prag, codul tipărește un mesaj care indică faptul că nu a fost detectat niciun eveniment.
+
+Utilizarea codului
+
+Pentru a rula acest cod, va trebui să importați cu pip : numpy obspy matplotlib. Codul este scris în Python 3.8.10, ar trebui să funcționeze și versiunea superioară. TREBUIE SĂ RULEZI AMBELE FIȘIERE pentru a putea detecta în timp real sacsave.py, adică clientul care primește pachetele de miniseed de pe serverul seedlink și le salvează ca .SAC și sacforecast.py care efectuează analiza și estimarea timpului rămas.
